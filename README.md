@@ -5,3 +5,7 @@ generate Japanese public holidays from [syukujitsu.csv](https://www8.cao.go.jp/c
 ## Related
 
 - [国民の祝日について - 内閣府](https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html)
+
+## License
+
+The MIT license
