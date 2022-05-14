@@ -15,7 +15,12 @@
     "through2": "^4.0.2",
     "typescript": "^4.6.4"
   },
+  "files": [
+    "index.*"
+  ],
   "license": "MIT",
+  "main": "index.cjs",
+  "module": "index.mjs",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
@@ -38,5 +43,7 @@
     "prebuild:cjs": "run-s -s generate:ts",
     "prebuild:mjs": "run-s -s generate:ts",
     "pregenerate": "run-s -s download > ./syukujitsu.csv"
-  }
+  },
+  "sideEffects": false,
+  "types": "index.d.ts"
 }
