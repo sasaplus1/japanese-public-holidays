@@ -20,6 +20,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn run generate
       - run: yarn run build
+      - run: yarn run fix
       - uses: peter-evans/create-pull-request@v4
         with:
           commit-message: 'update data files'
