@@ -21,6 +21,18 @@
   "license": "MIT",
   "main": "index.cjs",
   "module": "index.mjs",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "parser": "json-stringify"
+        }
+      }
+    ]
+  },
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
@@ -31,12 +43,18 @@
     "build:cjs": "tsc --declaration --module commonjs",
     "build:mjs": "tsc --declaration --module esnext",
     "download": "node ./npm_scripts/download.js",
+    "fix": "run-p -l fix:*",
+    "fix:fixpack": "npx fixpack",
+    "fix:prettier": "prettier --write .",
     "generate": "run-p -l generate:*",
     "generate:csv": "node ./npm_scripts/csv_to_csv.js < ./syukujitsu.csv > ./index.csv",
     "generate:json": "node ./npm_scripts/csv_to_json.js < ./syukujitsu.csv > ./index.json",
     "generate:ltsv": "node ./npm_scripts/csv_to_ltsv.js < ./syukujitsu.csv > ./index.ltsv",
     "generate:ts": "node ./npm_scripts/csv_to_ts.js < ./syukujitsu.csv > ./index.ts",
     "generate:tsv": "node ./npm_scripts/csv_to_tsv.js < ./syukujitsu.csv > ./index.tsv",
+    "lint": "run-p -l lint:*",
+    "lint:fixpack": "npx fixpack --dryRun",
+    "lint:prettier": "prettier --check .",
     "postbuild:cjs": "mv index.js index.cjs",
     "postbuild:mjs": "mv index.js index.mjs",
     "postgenerate:ts": "prettier --parser typescript --write ./index.ts",
