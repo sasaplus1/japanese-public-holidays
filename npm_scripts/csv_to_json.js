@@ -1,19 +1,23 @@
 const { parse: csvParse } = require('csv-parse');
 const through2 = require('through2');
 
-const { convertToIso8601 } = require('./convert');
+const { columns, convertToIso8601, filterOutPasts } = require('./utils');
 
 const holidays = [];
 
-const columns = ['date', 'name'];
+const isFutureOnly = process.argv[2] === '--future-only';
+
+const csvParseOptions = {
+  from_line: 2,
+  columns
+};
+
+if (isFutureOnly) {
+  csvParseOptions.on_record = filterOutPasts(new Date());
+}
 
 process.stdin
-  .pipe(
-    csvParse({
-      from_line: 2,
-      columns
-    })
-  )
+  .pipe(csvParse(csvParseOptions))
   .pipe(
     through2({
       objectMode: true

@@ -1,22 +1,31 @@
 const { parse: csvParse } = require('csv-parse');
 const { stringify: csvStringify } = require('csv-stringify');
 
-const { convertToIso8601 } = require('./convert');
+const {
+  columns,
+  convertToIso8601,
+  filterOutPasts,
+  isDateText
+} = require('./utils');
 
-const columns = ['date', 'name'];
+const isFutureOnly = process.argv[2] === '--future-only';
+
+const csvParseOptions = {
+  from_line: 2,
+  columns
+};
+
+if (isFutureOnly) {
+  csvParseOptions.on_record = filterOutPasts(new Date());
+}
 
 process.stdin
-  .pipe(
-    csvParse({
-      from_line: 2,
-      columns
-    })
-  )
+  .pipe(csvParse(csvParseOptions))
   .pipe(
     csvStringify({
       cast: {
         string(value) {
-          return /^[\d/]+$/.test(value) ? convertToIso8601(value) : value;
+          return isDateText(value) ? convertToIso8601(value) : value;
         }
       },
       columns,
