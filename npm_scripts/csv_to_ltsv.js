@@ -4,11 +4,13 @@ const through2 = require('through2');
 
 const { convertToIso8601 } = require('./convert');
 
+const columns = ['date', 'name'];
+
 process.stdin
   .pipe(
     csvParse({
       from_line: 2,
-      columns: ['date', 'name']
+      columns
     })
   )
   .pipe(
