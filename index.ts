@@ -1,5 +1,4 @@
 export type Holiday = { date: string; name: string };
-
 export const holidays: Holiday[] = [
   {
     date: '1955-01-01',
