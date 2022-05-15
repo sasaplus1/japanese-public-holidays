@@ -1,14 +1,12 @@
-const querystring = require('querystring');
-
 const download = require('download');
 const iconvLite = require('iconv-lite');
 
-const parameter = querystring.stringify({
-  id: 'd9ad35a5-6c9c-4127-bdbe-aa138fdffe42'
-});
-const URL = `https://www.data.go.jp/data/api/action/resource_show?${parameter}`;
+const dataUrl = new URL(
+  '/data/api/action/resource_show?id=d9ad35a5-6c9c-4127-bdbe-aa138fdffe42',
+  'https://www.data.go.jp'
+);
 
-download(URL)
+download(dataUrl.toString())
   .then(function (buffer) {
     const json = buffer.toString('utf8');
     const data = JSON.parse(json);
