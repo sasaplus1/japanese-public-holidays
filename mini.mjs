@@ -1,4 +1,4 @@
-export var holidays = [
+export const holidays = [
   {
     date: '2022-07-18',
     name: '海の日'
