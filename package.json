@@ -15,6 +15,16 @@
     "through2": "^4.0.2",
     "typescript": "^4.6.4"
   },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./mini": {
+      "import": "./mini.mjs",
+      "require": "./mini.cjs"
+    }
+  },
   "files": [
     "index.*",
     "mini.*"
