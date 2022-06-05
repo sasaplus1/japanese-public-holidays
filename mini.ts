@@ -1,5 +1,4 @@
-export type Holiday = { date: string; name: string };
-export const holidays: Holiday[] = [
+export const holidays = [
   {
     date: '2022-07-18',
     name: '海の日'
