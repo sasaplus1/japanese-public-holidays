@@ -1,5 +1,4 @@
 const { parse: csvParse } = require('csv-parse');
-const prettier = require('prettier');
 const through2 = require('through2');
 
 const { columns, convertToIso8601, filterOutPasts } = require('./utils');
@@ -34,16 +33,6 @@ process.stdin
   })
   .on('end', function () {
     process.stdout.write(
-      prettier.format(
-        [
-          'export type Holiday = { date: string; name: string };',
-          `export const holidays: Holiday[] = ${JSON.stringify(
-            holidays,
-            null,
-            2
-          )};`
-        ].join('\n'),
-        { filepath: 'data.ts', parser: 'typescript' }
-      )
+      `export const holidays = ${JSON.stringify(holidays, null, 2)};`
     );
   });
