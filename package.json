@@ -74,6 +74,7 @@
     "lint": "run-p -l lint:*",
     "lint:fixpack": "npx fixpack --dryRun",
     "lint:prettier": "prettier --check .",
+    "postbuild": "run-s -l fix:prettier",
     "postbuild:cjs": "mv index.js index.cjs && mv mini.js mini.cjs",
     "postbuild:mjs": "mv index.js index.mjs && mv mini.js mini.mjs",
     "postgenerate:full:ts": "prettier --parser typescript --write ./index.ts ./mini.ts",
