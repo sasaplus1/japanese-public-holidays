@@ -4,7 +4,7 @@
   "version": "3.0.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1",
+    "@tsconfig/strictest": "^1.0.1",
     "csv-parse": "^5.0.4",
     "csv-stringify": "^6.0.5",
     "download": "^8.0.0",
