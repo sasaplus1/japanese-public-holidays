@@ -23,8 +23,10 @@ jobs:
       - run: yarn run fix
       - uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: 'update data files'
-          branch: github-actions/update-data
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          body: ''
+          branch: feature/update-data
+          commit-message: update data files
           delete-branch: true
-          title: 'update data files'
-          body: 'update data files'
+          reviewers: sasaplus1
+          title: update data
