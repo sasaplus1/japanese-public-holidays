@@ -31,8 +31,8 @@
     "mini.*"
   ],
   "license": "MIT",
-  "main": "index.cjs",
-  "module": "index.mjs",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
   "prettier": {
     "singleQuote": true,
     "trailingComma": "none",
@@ -75,8 +75,8 @@
     "lint:fixpack": "npx fixpack --dryRun",
     "lint:prettier": "prettier --check .",
     "postbuild": "run-s -l fix:prettier",
-    "postbuild:cjs": "mv index.js index.cjs && mv mini.js mini.cjs",
-    "postbuild:mjs": "mv index.js index.mjs && mv mini.js mini.mjs",
+    "postbuild:cjs": "mv ./index.js ./index.cjs && mv ./mini.js ./mini.cjs",
+    "postbuild:mjs": "mv ./index.js ./index.mjs && mv ./mini.js ./mini.mjs",
     "postgenerate:full:ts": "prettier --parser typescript --write ./index.ts ./mini.ts",
     "postgenerate:mini:ts": "prettier --parser typescript --write ./index.ts ./mini.ts",
     "prebuild:cjs": "run-s -s generate:*:ts",
@@ -84,5 +84,5 @@
     "pregenerate": "run-s -s download > ./syukujitsu.csv"
   },
   "sideEffects": false,
-  "types": "index.d.ts"
+  "types": "./index.d.ts"
 }
