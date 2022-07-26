@@ -3,10 +3,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 exports.holidays = void 0;
 exports.holidays = [
   {
-    date: '2022-07-18',
-    name: '海の日'
-  },
-  {
     date: '2022-08-11',
     name: '山の日'
   },
