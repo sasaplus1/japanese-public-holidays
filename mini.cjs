@@ -3,14 +3,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 exports.holidays = void 0;
 exports.holidays = [
   {
-    date: '2022-09-19',
-    name: '敬老の日'
-  },
-  {
-    date: '2022-09-23',
-    name: '秋分の日'
-  },
-  {
     date: '2022-10-10',
     name: 'スポーツの日'
   },
