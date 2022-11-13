@@ -34,7 +34,7 @@ jobs:
           fi
         id: diff
       - run: yarn version --patch --no-git-tag-version
-        if: steps.diff.outputs.changed
+        if: steps.diff.outputs.changed == 'true'
       - uses: peter-evans/create-pull-request@v4
         with:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
