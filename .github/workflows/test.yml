@@ -14,9 +14,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: yarn
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn run lint
-      - run: yarn run generate
-      - run: yarn run build
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run generate
+      - run: npm run build

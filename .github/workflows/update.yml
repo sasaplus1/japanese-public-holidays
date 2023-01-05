@@ -19,12 +19,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: yarn
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn run generate
-      - run: yarn run build
-      - run: yarn run fix
+          cache: npm
+      - run: npm ci
+      - run: npm run generate
+      - run: npm run build
+      - run: npm run fix
       - run: |
           if git diff --exit-code --quiet
           then
@@ -33,7 +32,7 @@ jobs:
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
         id: diff
-      - run: yarn version --patch --no-git-tag-version
+      - run: npm version patch --no-git-tag-version
         if: steps.diff.outputs.changed == 'true'
       - uses: peter-evans/create-pull-request@v4
         with:

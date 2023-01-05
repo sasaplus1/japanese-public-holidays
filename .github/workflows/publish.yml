@@ -17,13 +17,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: yarn
+          cache: npm
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn run generate
-      - run: yarn run build
-      - run: yarn run fix
+      - run: npm ci
+      - run: npm run generate
+      - run: npm run build
+      - run: npm run fix
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
