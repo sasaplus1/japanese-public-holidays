@@ -3,14 +3,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 exports.holidays = void 0;
 exports.holidays = [
   {
-    date: '2023-01-01',
-    name: '元日'
-  },
-  {
-    date: '2023-01-02',
-    name: '休日'
-  },
-  {
     date: '2023-01-09',
     name: '成人の日'
   },
