@@ -1,6 +1,6 @@
 # japanese-public-holidays
 
-generate Japanese public holidays from [syukujitsu.csv](https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv)
+generate Japanese public holidays from ~~[syukujitsu.csv](https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv)~~ [shukujitsu.csv](https://www8.cao.go.jp/chosei/shukujitsu/shukujitsu.csv)
 
 ## Installation
 
