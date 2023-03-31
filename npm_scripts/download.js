@@ -19,5 +19,6 @@ download(dataUrl.toString())
       .pipe(process.stdout);
   })
   .catch(function (error) {
+    process.exitCode = 1;
     console.error(error);
   });
