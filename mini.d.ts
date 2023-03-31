@@ -1,4 +1,1 @@
-export declare const holidays: {
-  date: string;
-  name: string;
-}[];
+export declare const holidays: never[];
