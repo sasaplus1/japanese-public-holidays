@@ -1,4 +1,4 @@
-module.exports = {
+export = {
   holidays: [
     {
       date: '1955-01-01',
