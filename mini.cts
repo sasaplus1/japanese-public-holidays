@@ -1,4 +1,4 @@
-module.exports = {
+export = {
   holidays: [
     {
       date: '2023-04-29',
