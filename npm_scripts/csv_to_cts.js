@@ -33,6 +33,6 @@ process.stdin
   })
   .on('end', function () {
     process.stdout.write(
-      `module.exports = { holidays: ${JSON.stringify(holidays, null, 2)} };`
+      `export = { holidays: ${JSON.stringify(holidays, null, 2)} };`
     );
   });
