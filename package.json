@@ -19,11 +19,13 @@
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./index.cjs"
+      "require": "./index.cjs",
+      "types": "./index.d.mts"
     },
     "./mini": {
       "import": "./mini.mjs",
-      "require": "./mini.cjs"
+      "require": "./mini.cjs",
+      "types": "./mini.d.mts"
     }
   },
   "files": [
@@ -86,5 +88,5 @@
     "pregenerate": "run-s -s download > ./syukujitsu.csv"
   },
   "sideEffects": false,
-  "types": "./index.d.ts"
+  "types": "./index.d.cts"
 }
