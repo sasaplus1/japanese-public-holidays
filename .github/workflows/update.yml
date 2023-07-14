@@ -2,8 +2,8 @@ name: update
 
 on:
   schedule:
-    # at AM 6:50 on Saturday, JST
-    - cron: '50 21 * * 5'
+    # NOTE: at 6:50 am every day, JST
+    - cron: '50 21 * * *'
   workflow_dispatch:
 
 permissions:
