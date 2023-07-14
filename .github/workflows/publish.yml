@@ -36,3 +36,4 @@ jobs:
               ref: `refs/tags/${version}`,
               sha: '${{ github.sha }}'
             });
+        continue-on-error: true
