@@ -1,10 +1,6 @@
 export = {
   holidays: [
     {
-      date: '2023-08-11',
-      name: '山の日'
-    },
-    {
       date: '2023-09-18',
       name: '敬老の日'
     },
