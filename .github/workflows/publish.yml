@@ -12,6 +12,9 @@ jobs:
   publish:
     name: publish to npm
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -26,7 +29,6 @@ jobs:
       - run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-        continue-on-error: true
       - uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -36,4 +38,3 @@ jobs:
               ref: `refs/tags/${version}`,
               sha: '${{ github.sha }}'
             });
-        continue-on-error: true
