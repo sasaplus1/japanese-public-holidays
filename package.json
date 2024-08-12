@@ -1,7 +1,7 @@
 {
   "name": "japanese-public-holidays",
   "description": "generate Japanese public holidays from syukujitsu.csv",
-  "version": "3.2.19",
+  "version": "3.2.20",
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.0",
