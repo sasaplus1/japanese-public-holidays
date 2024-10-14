@@ -1,9 +1,5 @@
 export const holidays = [
   {
-    date: '2024-10-14',
-    name: 'スポーツの日'
-  },
-  {
     date: '2024-11-03',
     name: '文化の日'
   },
