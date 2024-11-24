@@ -1,9 +1,5 @@
 export var holidays = [
   {
-    date: '2024-11-23',
-    name: '勤労感謝の日'
-  },
-  {
     date: '2025-01-01',
     name: '元日'
   },
