@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4
         with:
           node-version: lts/*
           cache: npm
@@ -34,7 +34,7 @@ jobs:
         id: diff
       - run: npm version patch --no-git-tag-version
         if: steps.diff.outputs.changed == 'true'
-      - uses: peter-evans/create-pull-request@v7
+      - uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f # v7
         with:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           body: ''
