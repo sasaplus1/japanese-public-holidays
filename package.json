@@ -55,8 +55,8 @@
   },
   "scripts": {
     "build": "run-s -l build:*",
-    "build:cjs": "tsc --declaration --module commonjs ./index.cts ./mini.cts",
-    "build:mjs": "tsc --declaration --module esnext ./index.mts ./mini.mts",
+    "build:cjs": "tsc --declaration ./index.cts ./mini.cts",
+    "build:mjs": "tsc --declaration ./index.mts ./mini.mts",
     "download": "node ./npm_scripts/download.js",
     "fix": "run-p -l fix:*",
     "fix:fixpack": "npx fixpack",
