@@ -19,14 +19,24 @@
   },
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.cjs",
-      "types": "./index.d.mts"
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./index.cjs"
+      }
     },
     "./mini": {
-      "import": "./mini.mjs",
-      "require": "./mini.cjs",
-      "types": "./mini.d.mts"
+      "import": {
+        "types": "./mini.d.mts",
+        "default": "./mini.mjs"
+      },
+      "require": {
+        "types": "./mini.d.cts",
+        "default": "./mini.cjs"
+      }
     }
   },
   "files": [
