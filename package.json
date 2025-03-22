@@ -5,7 +5,7 @@
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "devDependencies": {
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "18.15.11",
+    "@types/node": "22.13.11",
     "csv-parse": "5.6.0",
     "csv-stringify": "6.5.2",
     "download": "8.0.0",
@@ -14,18 +14,29 @@
     "npm-run-all2": "7.0.2",
     "prettier": "3.5.3",
     "through2": "4.0.2",
-    "typescript": "5.0.3"
+    "typescript": "5.8.2",
+    "undici-types": "7.5.0"
   },
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.cjs",
-      "types": "./index.d.mts"
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./index.cjs"
+      }
     },
     "./mini": {
-      "import": "./mini.mjs",
-      "require": "./mini.cjs",
-      "types": "./mini.d.mts"
+      "import": {
+        "types": "./mini.d.mts",
+        "default": "./mini.mjs"
+      },
+      "require": {
+        "types": "./mini.d.cts",
+        "default": "./mini.cjs"
+      }
     }
   },
   "files": [
@@ -54,8 +65,8 @@
   },
   "scripts": {
     "build": "run-s -l build:*",
-    "build:cjs": "tsc --declaration --module commonjs ./index.cts ./mini.cts",
-    "build:mjs": "tsc --declaration --module esnext ./index.mts ./mini.mts",
+    "build:cjs": "tsc --declaration ./index.cts ./mini.cts",
+    "build:mjs": "tsc --declaration ./index.mts ./mini.mts",
     "download": "node ./npm_scripts/download.js",
     "fix": "run-p -l fix:*",
     "fix:fixpack": "npx fixpack",
