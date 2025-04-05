@@ -15,7 +15,7 @@
     "prettier": "3.5.3",
     "through2": "4.0.2",
     "typescript": "5.8.2",
-    "undici-types": "7.5.0"
+    "undici-types": "7.7.0"
   },
   "exports": {
     ".": {
