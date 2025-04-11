@@ -43,7 +43,7 @@ jobs:
           git checkout -b feature/update-data
           git add .
           git commit -m 'update data files'
-          git push origin feature/update-data
+          git push origin +feature/update-data
       - if: steps.diff.outputs.changed
         run: >
           gh pr create
