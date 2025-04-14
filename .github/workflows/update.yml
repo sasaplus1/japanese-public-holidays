@@ -32,19 +32,19 @@ jobs:
           else
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
-      - if: steps.diff.outputs.changed
+      - if: steps.diff.outputs.changed == 'true'
         run: npm version patch --no-git-tag-version
-      - if: steps.diff.outputs.changed
+      - if: steps.diff.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - if: steps.diff.outputs.changed
+      - if: steps.diff.outputs.changed == 'true'
         run: |
           git checkout -b feature/update-data
           git add .
           git commit -m 'update data files'
           git push origin +feature/update-data
-      - if: steps.diff.outputs.changed
+      - if: steps.diff.outputs.changed == 'true'
         run: >
           gh pr create
           --body ''
@@ -53,3 +53,4 @@ jobs:
         env:
           GH_PROMPT_DISABLED: 1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
