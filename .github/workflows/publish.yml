@@ -22,13 +22,13 @@ jobs:
           node-version: lts/*
           cache: npm
           registry-url: 'https://registry.npmjs.org'
+      # for OIDC authentication
+      - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run generate
       - run: npm run build
       - run: npm run fix
-      - run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      - run: npm publish
       - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
