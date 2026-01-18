@@ -9,7 +9,7 @@
     "csv-parse": "6.1.0",
     "csv-stringify": "6.6.0",
     "download": "8.0.0",
-    "iconv-lite": "0.7.0",
+    "iconv-lite": "0.7.2",
     "ltsv": "2.0.0",
     "npm-run-all2": "8.0.4",
     "prettier": "3.7.4",
