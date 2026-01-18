@@ -5,7 +5,7 @@
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "devDependencies": {
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "24.10.4",
+    "@types/node": "24.10.8",
     "csv-parse": "6.1.0",
     "csv-stringify": "6.6.0",
     "download": "8.0.0",
