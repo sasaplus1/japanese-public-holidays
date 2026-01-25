@@ -12,7 +12,7 @@
     "iconv-lite": "0.7.2",
     "ltsv": "3.0.0",
     "npm-run-all2": "8.0.4",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "through2": "4.0.2",
     "typescript": "5.9.3",
     "undici-types": "7.19.0"
