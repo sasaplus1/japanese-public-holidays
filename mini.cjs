@@ -2,10 +2,6 @@
 module.exports = {
   holidays: [
     {
-      date: '2026-08-11',
-      name: '山の日'
-    },
-    {
       date: '2026-09-21',
       name: '敬老の日'
     },
