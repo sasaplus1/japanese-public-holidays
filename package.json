@@ -7,7 +7,7 @@
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "24.13.5",
     "csv-parse": "6.2.1",
-    "csv-stringify": "6.6.0",
+    "csv-stringify": "6.8.3",
     "download": "8.0.0",
     "iconv-lite": "0.7.3",
     "ltsv": "3.0.2",
