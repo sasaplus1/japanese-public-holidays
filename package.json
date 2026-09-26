@@ -10,7 +10,7 @@
     "csv-stringify": "6.8.3",
     "download": "8.0.0",
     "iconv-lite": "0.7.3",
-    "ltsv": "3.0.2",
+    "ltsv": "4.0.1",
     "npm-run-all2": "8.0.4",
     "prettier": "3.9.8",
     "through2": "4.0.2",
