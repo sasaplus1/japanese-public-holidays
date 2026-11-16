@@ -14,7 +14,7 @@
     "npm-run-all2": "9.0.3",
     "prettier": "3.9.8",
     "through2": "4.0.2",
-    "typescript": "5.9.3",
+    "typescript": "7.0.2",
     "undici-types": "8.10.2"
   },
   "exports": {
